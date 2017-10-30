@@ -73,6 +73,7 @@ CMakeFiles/BM1D.dir/BM1D.cc.o: /usr/local/root/include/TMathBase.h
 CMakeFiles/BM1D.dir/BM1D.cc.o: /usr/local/root/include/TMatrixDBasefwd.h
 CMakeFiles/BM1D.dir/BM1D.cc.o: /usr/local/root/include/TMatrixFBasefwd.h
 CMakeFiles/BM1D.dir/BM1D.cc.o: /usr/local/root/include/TMethodCall.h
+CMakeFiles/BM1D.dir/BM1D.cc.o: /usr/local/root/include/TMultiGraph.h
 CMakeFiles/BM1D.dir/BM1D.cc.o: /usr/local/root/include/TNamed.h
 CMakeFiles/BM1D.dir/BM1D.cc.o: /usr/local/root/include/TNtuple.h
 CMakeFiles/BM1D.dir/BM1D.cc.o: /usr/local/root/include/TObjArray.h
@@ -199,6 +200,7 @@ CMakeFiles/BM1D.dir/src/Plotter.cc.o: /usr/local/root/include/TMathBase.h
 CMakeFiles/BM1D.dir/src/Plotter.cc.o: /usr/local/root/include/TMatrixDBasefwd.h
 CMakeFiles/BM1D.dir/src/Plotter.cc.o: /usr/local/root/include/TMatrixFBasefwd.h
 CMakeFiles/BM1D.dir/src/Plotter.cc.o: /usr/local/root/include/TMethodCall.h
+CMakeFiles/BM1D.dir/src/Plotter.cc.o: /usr/local/root/include/TMultiGraph.h
 CMakeFiles/BM1D.dir/src/Plotter.cc.o: /usr/local/root/include/TNamed.h
 CMakeFiles/BM1D.dir/src/Plotter.cc.o: /usr/local/root/include/TNtuple.h
 CMakeFiles/BM1D.dir/src/Plotter.cc.o: /usr/local/root/include/TObjArray.h

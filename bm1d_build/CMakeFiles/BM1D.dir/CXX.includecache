@@ -49,6 +49,8 @@ TGraph.h
 ../include/TGraph.h
 TTree.h
 ../include/TTree.h
+TMultiGraph.h
+../include/TMultiGraph.h
 
 /home/hallgato2/hall2git/BrownM2/BM1D.cc
 iostream
@@ -609,6 +611,14 @@ TDictionary.h
 /usr/local/root/include/TDictionary.h
 TInterpreter.h
 /usr/local/root/include/TInterpreter.h
+
+/usr/local/root/include/TMultiGraph.h
+TNamed.h
+/usr/local/root/include/TNamed.h
+TF1.h
+/usr/local/root/include/TF1.h
+TFitResultPtr.h
+/usr/local/root/include/TFitResultPtr.h
 
 /usr/local/root/include/TNamed.h
 TObject.h

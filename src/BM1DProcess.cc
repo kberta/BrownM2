@@ -1,12 +1,12 @@
 #include "BM1DProcess.hh"
 
-BM1DProcess::BM1DProcess(Int_t nP) :  nSteps (nP), p0(0.5), p1(0.3), gaussMean(0), gaussSigma(1)
+BM1DProcess::BM1DProcess(Int_t nP) :  nSteps (nP), nRun(1), p0(0.5), p1(0.3), gaussMean(0), gaussSigma(1)
 {
   randomGenerator = new TRandom();
   randomGeneratorGauss = new TRandom();
 }
 
-BM1DProcess::BM1DProcess(Int_t nP, double mean, double sigma) :  nSteps (nP), p0(0.5), p1(0.3), gaussMean(mean), gaussSigma(sigma)
+BM1DProcess::BM1DProcess(Int_t nP, Int_t nRun, double mean, double sigma) :  nSteps (nP), nRun(nRun), p0(0.5), p1(0.3), gaussMean(mean), gaussSigma(sigma)
 {
   randomGenerator = new TRandom();
   randomGenerator -> SetSeed(0);
@@ -15,22 +15,21 @@ BM1DProcess::BM1DProcess(Int_t nP, double mean, double sigma) :  nSteps (nP), p0
   randomGeneratorGauss -> SetSeed(0);
 }
 
-BM1DProcess::~BM1DProcess()
-{
-  ;
-}
 
-void BM1DProcess::Init(){
+/*void BM1DProcess::Init(){
   t.push_back(0.0);  //let's start at t=0, x=0, you can change it if you vant, please use Set methods
   x.push_back(0.0);
-}
+}*/
 
-void BM1DProcess::Run(){
+void BM1DProcess::Run(int runCount){
 	
 	double tmpM = gaussMean;
 	double tmpS = gaussSigma;
 	
-  for (Int_t i = 1;i < nSteps;i++)
+	t.push_back(0.0);  //let's start at t=0, x=0, you can change it if you vant, please use Set methods
+	x.push_back(0.0);
+	
+  for (Int_t i = runCount*1000+1; i < nSteps+(runCount*1000);i++)
     {
 		if(x[i-1] < 30 && x[i-1] > 20)
 		{
@@ -56,4 +55,12 @@ void BM1DProcess::Run(){
 		
 		}
 }
+}
+
+void BM1DProcess::RunMultiple()
+{
+	for(int i=0; i<nRun; i++)
+	{
+		Run(i);
+	}
 }
