@@ -9,7 +9,9 @@ int main(int argc, char* argv[])
 {
   TApplication App("tapp", &argc, argv);
   Int_t n = 1000;
-  BM1DProcess *myBM1DProcess = new BM1DProcess(n);
+  double mean = 0.1;
+  double sigma = 1;
+  BM1DProcess *myBM1DProcess = new BM1DProcess(n, mean, sigma);
   myBM1DProcess->Init();
   myBM1DProcess->Run();
   Plotter* myPlotter = new Plotter();
